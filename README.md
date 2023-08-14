@@ -14,7 +14,7 @@ Supports:
 - Saving games as PGNrt
 - Local & Online Opening Books
 - Local & Online Endgame Tablebases
-
+cx
 ## Steps
 1. [Install lichess-bot](https://github.com/lichess-bot-devs/lichess-bot/wiki/How-to-Install)
 2. [Create a lichess OAuth token](https://github.com/lichess-bot-devs/lichess-bot/wiki/How-to-create-a-Lichess-OAuth-token)
