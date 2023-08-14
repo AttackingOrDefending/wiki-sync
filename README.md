@@ -10,7 +10,7 @@ Supports:
 - Every variant and time control
 - UCI, XBoard, and Homemade engines
 - Matchmakingdfg
-- Offering Draw / Resigning
+- Offering Draw / Resigninggd
 - Saving games as PGN
 - Local & Online Opening Books
 - Local & Online Endgame Tablebases
