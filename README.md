@@ -9,7 +9,7 @@ A bridge between [Lichess Bot API](https://lichess.org/api#tag/Bot) and bots.
 Supports:
 - Every variant and time control
 - UCI, XBoard, and Homemade engines
-- Matchmaking
+- Matchmakingdfg
 - Offering Draw / Resigning
 - Saving games as PGN
 - Local & Online Opening Books
