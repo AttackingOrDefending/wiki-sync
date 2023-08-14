@@ -1,0 +1,30 @@
+name: Sync wiki
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'wiki/**'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Checkout wiki
+        uses: actions/checkout@v3
+        with:
+          repository: "${{ github.repository }}.wiki"
+          path: "wiki-sync.wiki"
+      - name: Sync files to wiki
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "Wiki sync"
+          cp -r $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/wiki/Home.md
+          cp -r $GITHUB_WORKSPACE/wiki/* $GITHUB_WORKSPACE/wiki-sync.wiki
+          cd $GITHUB_WORKSPACE/lichess-bot.wiki
+          git add .
+          git commit -m "Update wiki"
+          git push
