@@ -22,7 +22,7 @@ cx
 4. [Setup the engine](https://github.com/lichess-bot-devs/lichess-bot/wiki/Setup-the-engine)
 5. [Configure lichess-bot](https://github.com/lichess-bot-devs/lichess-bot/wiki/Configure-lichess-bot)
 6. [Run lichess-bot](https://github.com/lichess-bot-devs/lichess-bot/wiki/How-to-Run-lichess%E2%80%90bot)
-
+12
 ## Advanced options
 - [Create a custom engine](https://github.com/lichess-bot-devs/lichess-bot/wiki/Create-a-custom-engine)
 
