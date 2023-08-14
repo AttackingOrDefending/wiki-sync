@@ -5,7 +5,7 @@
 
 A bridge between [Lichess Bot API](https://lichess.org/api#tag/Bot) and bots.
 
-## Features
+## Featuresgfd
 Supports:
 - Every variant and time control
 - UCI, XBoard, and Homemade engines
