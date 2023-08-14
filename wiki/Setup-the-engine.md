@@ -1,6 +1,6 @@
 # Setup the engine
 ## For all engines
-Within the file `config.yml`:
+Within the file `config.yml`: test5
 - Enter the directory containing the engine executable in the `engine: dir` field.
 - Enter the executable name in the `engine: name` field (In Windows you may need to type a name with ".exe", like "lczero.exe")
 - If you want the engine to run in a different directory (e.g., if the engine needs to read or write files at a certain location), enter that directory in the `engine: working_dir` field.
