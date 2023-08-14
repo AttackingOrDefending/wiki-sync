@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - 'wiki/**'
       - 'README.md'
 
 jobs:
@@ -13,13 +14,18 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-      - name: Copy
-        run: cp README.md wiki/Home.md
+      - name: Checkout wiki
+        uses: actions/checkout@v3
+        with:
+          repository: "${{ github.repository }}.wiki"
+          path: "wiki-sync.wiki"
       - name: Sync files to wiki
         run: |
-          git config --global user.email "40605232+AttackingOrDefending@users.noreply.github.com"
-          git config --global user.name "AttackingOrDefending"
-          git remote set-url origin ${{ secrets.ssh }}
-          git add wiki/Home.md
-          git commit -m "Copy"
-          git push origin HEAD:main
+          git config --global user.email "actions@github.com"
+          git config --global user.name "Wiki sync"
+          cp -r $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/wiki/Home.md
+          cp -r $GITHUB_WORKSPACE/wiki/* $GITHUB_WORKSPACE/wiki-sync.wiki
+          cd $GITHUB_WORKSPACE/wiki-sync.wiki
+          git add .
+          git commit -m "Update wiki"
+          git push
