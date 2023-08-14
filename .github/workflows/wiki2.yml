@@ -1,4 +1,4 @@
-name: Sync wiki
+name: Sync wiki 2
 
 on:
   push:
@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - 'wiki/**'
-      - 'README.md'
 
 jobs:
   sync:
