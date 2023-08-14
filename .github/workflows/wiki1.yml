@@ -13,12 +13,13 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+      - name: Copy
+        run: cp README.md wiki/Home.md
       - name: Sync files to wiki
         run: |
           git config --global user.email "40605232+AttackingOrDefending@users.noreply.github.com"
           git config --global user.name "AttackingOrDefending"
           git remote set-url origin ${{ secrets.ssh }}
-          cp -r $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/wiki/Home.md
           git add wiki/Home.md
-          git commit -m "Update wiki 1"
+          git commit -m "Copy"
           git push origin HEAD:main
