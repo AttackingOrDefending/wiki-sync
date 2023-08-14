@@ -11,7 +11,7 @@ Supports:
 - UCI, XBoard, and Homemade engines
 - Matchmakingdfg
 - Offering Draw / Resigninggdg
-- Saving games as PGN
+- Saving games as PGNrt
 - Local & Online Opening Books
 - Local & Online Endgame Tablebases
 
