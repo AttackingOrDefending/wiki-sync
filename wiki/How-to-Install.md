@@ -1,6 +1,6 @@
 ### Mac/Linux
 - **NOTE: Only Python 3.9 or later is supported!**
-- Download the repo into lichess-bot directory.
+- Download the repo into lichess-bot directory. test2
 - Navigate to the directory in cmd/Terminal: `cd lichess-bot`.
 - Install pip: `apt install python3-pip`.
   - In non-Ubuntu distros, replace `apt` with the correct package manager (`pacman` in Arch, `dnf` in Fedora, `brew` in Mac, etc.), package name, and installation command.
