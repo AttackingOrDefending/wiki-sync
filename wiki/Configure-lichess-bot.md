@@ -1,5 +1,5 @@
 # Configuring lichess-bot
-There are many possible options within `config.yml` for configuring lichess-bot.
+There are many possible options within `config.yml` for configuring lichess-bot. test3
 
 ## Engine options
 - `protocol`: Specify which protocol your engine uses. Choices are
