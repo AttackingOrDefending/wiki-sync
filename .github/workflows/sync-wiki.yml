@@ -3,14 +3,14 @@ name: Sync wiki
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'wiki/**'
       - 'README.md'
 
 jobs:
   sync:
-    if: github.repository == 'lichess-bot-devs/lichess-bot'
+    if: github.repository == 'AttackingOrDefending/wiki-sync'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: "${{ github.repository }}.wiki"
-          path: "lichess-bot.wiki"
+          path: "wiki-sync.wiki"
       - name: Set path
         uses: dorny/paths-filter@v2
         id: changes
@@ -58,8 +58,8 @@ jobs:
           git push
       - name: Sync all files to wiki
         run: |
-          cp -r $GITHUB_WORKSPACE/wiki/* $GITHUB_WORKSPACE/lichess-bot.wiki
-          cd $GITHUB_WORKSPACE/lichess-bot.wiki
+          cp -r $GITHUB_WORKSPACE/wiki/* $GITHUB_WORKSPACE/wiki-sync.wiki
+          cd $GITHUB_WORKSPACE/wiki-sync.wiki
           git add .
           git commit -m "Auto update wiki (${{ github.event.head_commit.message }})"
           git push
