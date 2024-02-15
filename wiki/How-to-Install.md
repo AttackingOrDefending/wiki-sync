@@ -1,4 +1,4 @@
-### Mac/Linux
+### Mac/Linux t
 - **NOTE: Only Python 3.9 or later is supported!**
 - Download the repo into lichess-bot directory. test2 test4
 - Navigate to the directory in cmd/Terminal: `cd lichess-bot`.
