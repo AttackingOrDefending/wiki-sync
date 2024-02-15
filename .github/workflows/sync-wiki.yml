@@ -26,12 +26,9 @@ jobs:
           git config --global user.name "actions-user"
       - name: Sync all files to wiki
         run: |
-          cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/lichess-bot.wiki
-          cp -r $GITHUB_WORKSPACE/wiki/* $GITHUB_WORKSPACE/lichess-bot.wiki
-          cd $GITHUB_WORKSPACE/lichess-bot.wiki
+          cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/wiki-sync.wiki
+          cp -r $GITHUB_WORKSPACE/wiki/* $GITHUB_WORKSPACE/wiki-sync.wiki
+          cd $GITHUB_WORKSPACE/wiki-sync.wiki
           git add .
           git commit -m "Auto update wiki"
-          git push
-          git add .
-          git commit -m "Auto update wiki (${{ github.event.head_commit.message }})"
           git push
